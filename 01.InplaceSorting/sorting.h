@@ -34,7 +34,7 @@ void quick_sort(Iterator begin, Iterator end)
     if (std::distance(begin, end) <= 1) return;
     auto pivot = *std::prev(end);
     Iterator i = begin;
-    
+
     for (Iterator j = begin; j != std::prev(end); ++j)
     {
         if (*j < pivot)
@@ -43,7 +43,7 @@ void quick_sort(Iterator begin, Iterator end)
             ++i;
         }
     }
-    
+
     std::swap(*i, *std::prev(end));
     quick_sort(begin, i);
     quick_sort(std::next(i), end);

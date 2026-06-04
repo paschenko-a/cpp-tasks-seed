@@ -12,7 +12,8 @@ namespace base85
 static const char ALPHABET[] =
     "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&()*+-;<=>?@^_`{|}~";
 
-static const uint32_t POW85[5] = {
+static const uint32_t POW85[5] =
+{
     52200625,
     614125,
     7225,
@@ -77,7 +78,8 @@ std::vector<uint8_t> decode(std::vector<uint8_t> const &b85str)
             table[static_cast<unsigned char>(ALPHABET[i])] = i;
         }
         return table;
-    }();
+    }
+    ();
 
     std::vector<uint8_t> result;
     size_t len = b85str.size();
