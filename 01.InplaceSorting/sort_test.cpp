@@ -1,4 +1,6 @@
 #include <gtest/gtest.h>
+#include <algorithm>
+#include <vector>
 
 // А вот тут collvalue.h не надо, берите просто инты
 #include "sorting.h"
